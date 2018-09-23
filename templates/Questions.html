@@ -1,0 +1,13 @@
+<h1>A sample quiz</h1>
+<form action='/quiz' method='POST'>
+    <ol>
+    {% for i in q %}
+    <pre><li>{{q[i]}}</li></pre>
+        {%for choice in c[i]%}
+        <input type = "radio" value="{{choice}}" name = "{{i}}" >{{choice}}
+        <br>
+        {% endfor %}
+        {% endfor %}
+    </ol>
+    <input type="submit" value="submit" />
+</form>
